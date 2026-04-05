@@ -1,6 +1,6 @@
 module.exports = {
   // User Pages repo (Asma199-alt.github.io) is served at https://asma199-alt.github.io/ — root, no subpath.
-  pathPrefix: '/portfoliop',
+  pathPrefix: '/PortfolioP',
   siteMetadata: {
     title: `Hi, I'm Asma Mohseni`,
     description: `Here is my personal website`,
