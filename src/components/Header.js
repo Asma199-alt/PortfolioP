@@ -108,7 +108,7 @@ const Header = () => {
         >
           <Fade bottom>
             <h2><AnimatedLetters text="Hi, I'm Asma," /></h2>
-            <h2><AnimatedLetters text="a software developer." /></h2>
+            <h2><AnimatedLetters text="a robotic research assistant." /></h2>
           </Fade>
           <Fade bottom>
             <p>Computer Science &amp; Mathematics, 2026 at the University of Tulsa</p>

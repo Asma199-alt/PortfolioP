@@ -28,7 +28,7 @@ const h1FlipGif = `${RELEASES_BASE}/Archelology2.mp4`;
 const frankaMoveitVideo = `${RELEASES_BASE}/sim.mp4`;
 const newton = `${RELEASES_BASE}/singularity.mp4`;
 const claw = `${RELEASES_BASE}/gripper.mp4`;
-const urLousdVideo = withPrefix("/zed-follow-demo.mp4");
+const urLousdVideo = withPrefix("/bimanual-object-handling.mp4");
 const siggraphTalk = `${RELEASES_BASE}/bimanualpickplace.mp4`;
 
 
@@ -67,7 +67,7 @@ const NvidiaPreviewVideo = ({ src, className, previewStart, previewEnd }) => {
 
     const handleLoadedMetadata = () => {
       seekToStartIfNeeded();
-      video.play().catch(() => {});
+      video.play().catch(() => { });
     };
 
     const handleTimeUpdate = () => {
@@ -75,7 +75,7 @@ const NvidiaPreviewVideo = ({ src, className, previewStart, previewEnd }) => {
       if (video.currentTime >= safeEnd - 0.05) {
         try {
           video.currentTime = safeStart;
-          video.play().catch(() => {});
+          video.play().catch(() => { });
         } catch (_) {
           // ignore
         }
@@ -135,7 +135,7 @@ const NVIDIA = () => {
     if (el) observer.observe(el);
     return () => { if (el) observer.unobserve(el); };
   }, [hasAnimated]);
-  
+
   // Media mapping
   const mediaMap = {
     h1FlipGif,
@@ -157,10 +157,10 @@ const NVIDIA = () => {
     const mediaList = [baseMedia, ...galleryMedia];
 
     return {
-    ...item,
+      ...item,
       media: baseMedia,
       mediaList,
-    title: getText(item.title, language),
+      title: getText(item.title, language),
       description: getText(item.description, language),
       tags: item.tags || [],
     };
@@ -174,7 +174,7 @@ const NVIDIA = () => {
             <AnimatedTitle text={getText(data.sections.nvidia, language)} letterClass={letterClass} />
           </h1>
         </Fade>
-        
+
         <div className="nvidia-wrapper">
           <div className="nvidia-projects">
             {items.map((item, index) => (
@@ -233,7 +233,7 @@ const NVIDIA = () => {
                       Click for more
                     </p>
                   </div>
-              </Fade>
+                </Fade>
               </button>
             ))}
           </div>
